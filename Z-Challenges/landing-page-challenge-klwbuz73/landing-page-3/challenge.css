@@ -1,0 +1,150 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  /* Define header styles here */
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  top: 0;
+  position: sticky;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  /* Define logo styles here */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.logo img {
+  /* Define image styles within the logo here */
+  border-radius: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+.nav-menu a {
+  /* Define navigation link styles here */
+  text-decoration: none;
+  color: #333;
+
+}
+
+.nav-menu a:hover {
+  /* Define hover styles for navigation links here */
+}
+
+.hero {
+  /* Define hero section styles here */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("./assets/chaipatti.png") no-repeat center center/cover;
+height: 60vh;
+width: 100%;
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 20px;
+  padding-top: 100px;
+}
+
+.hero-text h1 {
+  /* Define styles for h1 in hero-text here */
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+.hero-text p {
+  /* Define styles for paragraph in hero-text here */
+  font-size: 20px;
+}
+
+.shop-button {
+  /* Define shop button styles here */
+  border: none;
+  padding: 20px 30px;
+  background-color: rgb(215, 16, 16);
+  border-radius: 40px;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.shop-button:hover {
+  /* Define hover styles for shop button here */
+  background-color: rgb(181, 7, 7);
+
+}
+
+.tea-collection {
+  /* Define tea collection section styles here */
+  padding: 20px;
+}
+
+.tea-collection h2 {
+  /* Define styles for h2 in tea collection here */
+  text-align: center;
+  font-size: 37px;
+  color: brown;
+}
+
+.tea-cards {
+  /* Define tea cards container styles here */
+  display:flex;
+  padding-top: 40px;
+  justify-content: center;
+  padding-left: 70px;
+  flex-wrap: wrap;
+  gap: 70px;
+  padding-right: 70px;
+ 
+}
+
+.tea-card {
+  /* Define styles for each tea card here */
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(249, 249, 245);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 25%;
+  box-shadow: 1px 1px 2px 1.5px rgb(216, 216, 216);
+}
+
+.tea-card h3 {
+  /* Define styles for tea card headings here */
+  color: brown;
+}
+
+.tea-card p {
+  /* Define styles for tea card paragraph text here */
+}
