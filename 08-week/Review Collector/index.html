@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Collector</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="hero ">
+      <h1 class="flex justify-center font-bold text-5xl mt-4 text-orange-600">
+        Give Review
+      </h1>
+    </div>
+    <div class="main bg-gray-700 text-white border flex w-[90vw] mx-auto mt-2 gap-2 h-[70vh] p-2">
+      <div class="input border w-[50%] px-3">
+        <h2 class="flex justify-center text-2xl">Enter Review</h2>
+        <div class="title flex flex-col items-center text-xl">
+          <label for="title"> Subject</label>
+          <input
+            type="text"
+            class="border p-2 text-orange-600 mx-auto rounded-lg w-[90%]"
+            id="title"
+            required
+          />
+        </div>
+        <div class="desc flex flex-col items-center text-xl font-bol">
+          <label for="review">Enter your review</label>
+          <textarea
+            required
+            type="text"
+            title="review"
+            class="border mx-auto h-24 rounded-lg w-[90%]"
+            name=""
+            id="userInput"
+          >
+          </textarea>
+        </div>
+
+        <span class="flex mt-5 gap-2 cursor-pointer  justify-center" id="star"> </span>
+
+        <div class="btn flex justify-center mt-8">
+          <button
+            onclick="handleClick()"
+            class="p-2 bg-amber-600 text-white rounded-xl"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="output border w-[50%] p-3">
+        <h2 class="flex justify-center text-2xl ">Your Review</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

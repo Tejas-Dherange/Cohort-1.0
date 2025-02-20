@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-96">
+      <h1 class="text-center text-3xl font-bold text-gray-800 mb-6">
+        BMI Calculator
+      </h1>
+      <form >
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium">Age</label>
+          <input
+            type="text"
+            class="age w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-orange-500 outline-none"
+            placeholder="Enter your age"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium">Height (cm)</label>
+          <input
+            type="text"
+            id="height"
+            class=" w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-orange-500 outline-none"
+            placeholder="Enter your height in cm"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium">Weight (kg)</label>
+          <input
+          id="weight"
+            type="text"
+            class=" w-full border rounded-lg p-2 mt-1 focus:ring-2 focus:ring-orange-500 outline-none"
+            placeholder="Enter your weight in kg"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium">Gender</label>
+          <select
+            class="w-full gender border rounded-lg p-2 mt-1 bg-white focus:ring-2 focus:ring-orange-500 outline-none"
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="flex justify-center">
+         
+          <button type="button"  class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 rounded-lg transition-all"
+          onclick="handleClick(event)" >
+          Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
