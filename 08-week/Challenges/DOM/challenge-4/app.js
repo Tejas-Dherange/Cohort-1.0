@@ -30,6 +30,8 @@ document.getElementById("addButton").addEventListener("click", () => {
 });
 // })
 
+
+//strike through complted text
 document.getElementById("taskList").addEventListener("change", (event) => {
   if (event.target.classList.contains("complete-checkbox")) {
     event.target.closest(".task-item").classList.toggle("completed");
@@ -45,9 +47,16 @@ document.getElementById("taskList").addEventListener("change", (event) => {
 
 });
 
+
+//deleting a task
 document.getElementById("taskList").addEventListener("click", (event) => {
   if (event.target.classList.contains("delete-button")) {
-    event.target.closest(".task-item").remove();
+   const task= event.target.closest(".task-item")
+    if (task.querySelector(".complete-checkbox").checked) {
+      completed -= 1;
+      document.getElementById("completedTasks").textContent = `Completed: ${completed}`;
+    }
+    task.remove();
     total-=1;
     document.getElementById("totalTasks").textContent = `Total tasks: ${total}`;
     
