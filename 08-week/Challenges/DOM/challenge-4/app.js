@@ -12,13 +12,11 @@ document.getElementById("addButton").addEventListener("click", () => {
   if (val.value) {
     document.getElementsByClassName("empty-list")[0].innerHTML = "";
     const list = document.createElement("li");
-    list.className = "task-item ";
+    list.className = "task-item";
     list.innerHTML = `
         <span><input id="check" class="complete-checkbox" type="checkbox"></span>
         <p class=" task-text">${val.value}</p>
         <span><button id="del" class="delete-button">Delete</button></span>
-        
-        
         `;
     console.log(list);
     total += 1;
@@ -36,9 +34,9 @@ document.getElementById("taskList").addEventListener("change", (event) => {
   if (event.target.classList.contains("complete-checkbox")) {
     event.target.closest(".task-item").classList.toggle("completed");
     if (event.target.checked) {
-        completed += 1; // Increase count when checked
+        completed += 1; 
       } else {
-        completed -= 1; // Decrease count when unchecked
+        completed -= 1; 
       }
 }
     document.getElementById(

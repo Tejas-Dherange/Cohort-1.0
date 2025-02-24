@@ -1,22 +1,91 @@
-/**
- * Write your challenge solution here
- */
-// Image data
-const images = [
-  {
-    url: 'https://plus.unsplash.com/premium_photo-1666863909125-3a01f038e71f?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    caption: 'Beautiful Mountain Landscape',
-  },
-  {
-    url: 'https://plus.unsplash.com/premium_photo-1690576837108-3c8343a1fc83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    caption: 'Ocean Sunset View',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=2041&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    caption: 'Autumn Forest Path',
-  },
-  {
-    url: 'https://plus.unsplash.com/premium_photo-1680466057202-4aa3c6329758?q=80&w=2138&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    caption: 'Urban City Skyline',
-  },
-];
+
+
+const arr = ["🐶", "🐱", "🐰", "🐵", "🐶", "🐱", "🐰", "🐵", "🐸", "🐼", "🦁", "🦊", "🐸", "🐼", "🦁", "🦊"]; // Each emoji appears twice
+arr.sort(() => Math.random() - 0.5);
+const container = document.getElementById("gameContainer");
+for (let i = 0; i < 16; i++) {
+  const div1 = document.createElement("div");
+
+  div1.className = "card";
+  div1.innerHTML = `
+  <div class="card-front"> ?</div>
+  <div class="card-back" id="emoji">${arr[i ]}</div>
+  `;
+  container.appendChild(div1);
+  // console.log(container);
+}
+
+const options={
+  i:"2 digit"
+}
+let flip = 0;
+let card1, card2;
+let emoji1, emoji2;
+let moves = 0;
+let i = 0;
+let j = 1;
+let k = 0;
+function timer() {
+  setInterval(() => {
+    if (j % 60 == 0) {
+      i++;
+      j = 0;
+    }
+    document.getElementById(
+      "time"
+    ).textContent = `${i} : ${j.toString().padStart(2, '0')}`;
+    j += 1;
+  }, 1000);
+}
+let isChecking = false;
+
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    if (k == 0) {
+      timer();
+      k = 1;
+    }
+    if (isChecking) return;
+    if (!card.classList.contains("flipped")) {
+      card.classList.toggle("flipped");
+      if (flip == 0) {
+        emoji1 = card.querySelector(".card-back").textContent.trim();
+        card1 = e.target.closest(".card");
+        flip++;
+
+        console.log(emoji1);
+      } else if (flip === 1 && card !== card1) {
+        emoji2 = card.querySelector(".card-back").textContent.trim();
+        card2 = e.target.closest(".card");
+        console.log(card2);
+        console.log(emoji2);
+        flip++;
+        if (emoji1 !== emoji2) {
+          isChecking = true;
+          setTimeout(() => {
+            card1.classList.toggle("flipped");
+            card2.classList.toggle("flipped");
+            flip = 0;
+            isChecking = false;
+          }, 800);
+        } else {
+          moves++;
+          flip = 0;
+        }
+      }
+      console.log(moves);
+      document.getElementById("moves").innerText = `${moves}`;
+      if (moves === 8) {
+        setTimeout(()=>{
+
+          alert("Game completed");
+          restartGame();
+        },1000)
+      }
+    }
+  });
+});
+
+function restartGame() {
+  window.location.reload();
+}
