@@ -1,9 +1,13 @@
 
 
-const arr = ["🐶", "🐱", "🐰", "🐵", "🐶", "🐱", "🐰", "🐵", "🐸", "🐼", "🦁", "🦊", "🐸", "🐼", "🦁", "🦊"]; // Each emoji appears twice
+const arr = ["🐶", "🐱", "🐰", "🐵", "🐶", "🐱", "🐰", "🐵", "🐸", "🐼", "🦁", "🦊", "🐸", "🐼", "🦁", "🦊"];
 arr.sort(() => Math.random() - 0.5);
+
+
+
 const container = document.getElementById("gameContainer");
 for (let i = 0; i < 16; i++) {
+
   const div1 = document.createElement("div");
 
   div1.className = "card";
@@ -18,6 +22,7 @@ for (let i = 0; i < 16; i++) {
 const options={
   i:"2 digit"
 }
+
 let flip = 0;
 let card1, card2;
 let emoji1, emoji2;
@@ -25,6 +30,7 @@ let moves = 0;
 let i = 0;
 let j = 1;
 let k = 0;
+
 function timer() {
   setInterval(() => {
     if (j % 60 == 0) {
@@ -37,6 +43,8 @@ function timer() {
     j += 1;
   }, 1000);
 }
+
+
 let isChecking = false;
 
 document.querySelectorAll(".card").forEach((card) => {
