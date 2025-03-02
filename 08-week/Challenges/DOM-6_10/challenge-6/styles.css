@@ -76,7 +76,7 @@ h2 {
 .hand {
   position: absolute;
   bottom: 50%;
-  transform-origin: bottom;
+  transform-origin: bottom center;
   border-radius: 4px;
   transform: translateX(-50%) rotate(0deg);
   transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
@@ -122,8 +122,8 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  /* .container {
+  .container {
     flex-direction: row;
     gap: 50px;
-  } */
+  }
 }

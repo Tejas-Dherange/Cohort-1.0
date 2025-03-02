@@ -98,7 +98,7 @@ if (!Array.prototype.Myfilter) {
 let arr = [1, 2, 3];
 console.log(arr.Mymap((x,i)=>x*2));
 
-let sum = arr.Myreduce((a, b) => a + b);
+let sum = arr.Myreduce((a, b) => a + b );
 // console.log(sum);
 
 let narr = [2, 4, 6, 8, 5, 9, 5];

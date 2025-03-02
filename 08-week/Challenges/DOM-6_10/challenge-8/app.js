@@ -3,7 +3,6 @@ let total=0;
 function addToCart(name,price){
     if(cart[name]){
         cart[name].quantity+=1;
-        
     }else{
         cart[name]={quantity:1,price:price}; 
         const item=document.createElement("div");

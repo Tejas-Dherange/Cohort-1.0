@@ -32,23 +32,16 @@ for (let i = 1; i <= 12; i++) {
   number.classList.add("number");
 
   // Set Rotation
-  let angle = (i * 29.6) * (Math.PI / 180); // Convert degrees to radians
-  let x = Math.sin(angle) * 115;
-  let y = -Math.cos(angle) * 125;
+  let angle = (i * 30) * (Math.PI / 180); // Convert degrees to radians
+  let x = Math.sin(angle) * 120;
+  let y = -Math.cos(angle) * 122;
 
   number.style.transform = `translate(${x}px, ${y}px)`;
   number.innerHTML = `<span>${i}</span>`;
   clock.appendChild(number);
 }
 
-// Generate Hands Dynamically 
-const hands = ["hour", "minute", "second"];
-for (let i = 0; i < 3; i++) {
-  let hand = document.createElement("div");
-  hand.classList.add("hand");
-  hand.classList.add(hands[i]);
-  clock.appendChild(hand);
-}
+
 
 setInterval(() => {
   let date = new Date();
@@ -60,6 +53,7 @@ setInterval(() => {
   let minuteRotation = (minutes / 60) * 360 + (seconds / 60) * 6;
   let secondRotation = (seconds / 60) * 360;
 
+ 
   document.querySelector(".hour").style.transform = `rotate(${hourRotation}deg)`;
   document.querySelector(".minute").style.transform = `rotate(${minuteRotation}deg)`;
   document.querySelector(".second").style.transform = `rotate(${secondRotation}deg)`;

@@ -31,7 +31,6 @@ document.getElementById("caption").textContent = images[num].caption;
 document.getElementById("carouselTrack").appendChild(img);
 function showimg(num) {
   img.src = images[num].url;
-
   document.getElementById("caption").textContent = images[num].caption;
 }
 
@@ -48,7 +47,7 @@ document.getElementById("prevButton").addEventListener("click", () => {
 let play = false;
 let intervalID;
 let countdownID;
-let timeleft = 5; // Correct variable name
+let timeleft = 5;
 
 const autoBtn = document.getElementById("autoPlayButton");
 

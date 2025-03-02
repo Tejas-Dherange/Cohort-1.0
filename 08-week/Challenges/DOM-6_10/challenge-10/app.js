@@ -52,7 +52,7 @@ document.querySelectorAll(".card").forEach((card) => {
     if (k == 0) {
       timer();
       k = 1;
-    }
+    } 
     if (isChecking) return;
     if (!card.classList.contains("flipped")) {
       card.classList.toggle("flipped");

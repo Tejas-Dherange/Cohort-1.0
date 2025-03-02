@@ -27,18 +27,14 @@ let blk = true;
 bg.className=`${bg.classList}, dark-mode`;
 
 function handleclick(){
-  if(blk){
-   bg.classList.toggle("dark-mode");
+  bg.classList.toggle("dark-mode");
+  if( !bg.classList.contains("dark-mode")){
    bulbbg.style.backgroundColor="yellow"
    tgbtn.textContent="Turn off";
    status.textContent="Status: On";
-   blk=!blk;
   }else{
-    // bg.className=`dark-mode`;
-    bg.classList.toggle("dark-mode");
     bulbbg.style.backgroundColor="#95a5a6"
     tgbtn.textContent="Turn on";
     status.textContent="Status: off";
-    blk=!blk;
   }
 }

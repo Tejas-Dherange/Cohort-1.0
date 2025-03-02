@@ -2,14 +2,14 @@
  * Write your challenge solution here
  */
 
-document.querySelector(".form-container").addEventListener("input",(e)=>{
-  if (e.target.matches("input, textarea")) { 
-  console.log(`${e.target.id.split("I")[0]}Display`);
-  console.log(e.target.val);
-  
-  document.getElementById(`${e.target.id.split("I")[0]}Display`).textContent=e.target.value;
+document.querySelector(".form-container").addEventListener("input", (e) => {
+  if (e.target.matches("input, textarea")) {
+    console.log(`${e.target.id.split("I")[0]}Display`);
+    console.log(e.target.val);
+    document.getElementById(`${e.target.id.split("I")[0]}Display`).textContent =
+    e.target.value;
   }
-})
+});
 
 // document.querySelector(".form-container").addEventListener("input", (e) => {
 //   if (e.target.matches("input, textarea")) { // Ensure only form elements are handled
@@ -24,9 +24,6 @@ document.querySelector(".form-container").addEventListener("input",(e)=>{
 //     }
 //   }
 // });
-
-
-
 
 // document.getElementById("nameInput").addEventListener("input",(e)=>{
 //   document.getElementById("nameDisplay").textContent=e.target.value;
