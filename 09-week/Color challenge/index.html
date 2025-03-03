@@ -51,14 +51,19 @@ button{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+.card{
+    height: 10vh;
+    width: 10vw;
+    border: 2px solid red;
+}
     </style>
 </head>
 <body id="bd">
-    <div class="container">
+    <div class="container" >
         <h1 >Select a color</h1>
 
-        <select name="color"  title="colors" id="options">
-            <option value="White">White</option>
+        <select name="color"   title="colors" id="options">
+            <option  value="White">White</option>
             <option value="Red">Red</option>
             <option value="Green">Green</option>
             <option value="Purple">Purple</option>
@@ -69,6 +74,9 @@ button{
 
         <div class="buttons" id="buttons">
           
+        </div>
+        <div class="card " draggable="true">
+
         </div>
     </div>
     <script src="script.js"></script>
