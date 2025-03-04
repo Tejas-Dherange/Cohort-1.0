@@ -62,8 +62,8 @@ function showTasks() {
     <div class="flexforContent">
      <span class="task-text"> ${localStorage.getItem(key)} </span>
      <div class="editDeleteButtons">
-     <button id="editBtn">edit </button>
-     <button id="deleteBtn"> del</button>
+     <button id="editBtn">✏️</button>
+     <button id="deleteBtn"> 🗑️ </button>
      </div>
      </div>
       
@@ -102,8 +102,8 @@ addButton.addEventListener("click", (e) => {
   <div class="flexforContent">
      <span class="task-text"> ${data} </span>
      <div class="editDeleteButtons">
-     <button id="editBtn">edit </button>
-     <button id="deleteBtn"> del</button>
+       <button id="editBtn">✏️</button>
+     <button id="deleteBtn"> 🗑️ </button>
      </div>
      </div>
   ${time.split("k")[0]}

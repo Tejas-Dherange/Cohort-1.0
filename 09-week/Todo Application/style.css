@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgb(44, 46, 65);
+  border-radius: 10px;
 }
 .hero {
   display: flex;
@@ -34,11 +35,12 @@ body {
 }
 
 p {
-  padding: 10px 5px;
+  padding: 15px 10px;
   border: 2px solid rgb(210, 210, 210);
   width: 60%;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   cursor:  row-resize;
+  border-radius: 10px;
 }
 .flying{
   transform: scale(1.1);
@@ -97,12 +99,14 @@ p.drop {
  width: 90%;
 }
 
-#deleteBtn {
+#deleteBtn,#editBtn  {
   cursor: pointer;
+  padding: 4px 6px ;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
 }
-#editBtn {
-  cursor: pointer;
-}
+
 
 .flexforContent{
     display: flex;
